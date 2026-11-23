@@ -1,5 +1,5 @@
 ---
-name: Implement Next
+name: implement-next
 description: Implement the next logical task and commit it
 ---
 
