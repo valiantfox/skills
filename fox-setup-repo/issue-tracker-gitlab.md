@@ -24,7 +24,7 @@ Run `glab issue view <number> --comments`.
 
 ## Epic operations
 
-Used by `/planning`. The **epic** is a single issue with **child** issues as tickets.
+Used by `/fox-plan`. The **epic** is a single issue with **child** issues as tickets.
 
 - **Epic**: a single issue labelled `epic`, holding the Notes / Decisions-so-far / Fog body. `glab issue create --label epic`. (On GitLab tiers with native epics, a native epic may hold it instead; a labelled issue works everywhere.)
 - **Child ticket**: an issue carrying `Part of #<epic>` at the top of its description, linked to the epic (`glab issue create --linked-issues <epic> --link-type relates_to`), and labels `epic:<type>` (`research`/`prototype`/`refine`/`task`). Once claimed, the ticket is assigned to the driving dev.

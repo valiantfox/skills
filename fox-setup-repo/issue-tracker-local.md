@@ -20,7 +20,7 @@ Read the file at the referenced path. The user will normally pass the path or th
 
 ## Epic operations
 
-Used by `/planning`. The **epic** is a file with one **child** file per ticket.
+Used by `/fox-plan`. The **epic** is a file with one **child** file per ticket.
 
 - **Epic**: `.scratch/<effort>/epic.md` (the Notes / Decisions-so-far / Fog body).
 - **Child ticket**: `.scratch/<effort>/issues/NN-<slug>.md`, numbered from `01`, with the question in the body. A `Type:` line records the ticket type (`research`/`prototype`/`refine`/`task`); a `Status:` line records `claimed`/`resolved`.

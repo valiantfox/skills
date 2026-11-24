@@ -28,7 +28,7 @@ Read it as in **Read an issue** above.
 
 ## Epic operations
 
-Used by `/planning`. The **epic** is a single issue with **child** issues as tickets.
+Used by `/fox-plan`. The **epic** is a single issue with **child** issues as tickets.
 
 - **Epic**: a single issue labelled `epic`, holding the Notes / Decisions-so-far / Fog body. `gh issue create --label epic`.
 - **Child ticket**: an issue linked to the epic as a GitHub sub-issue (see **Make an issue a sub-issue of a parent**). Where sub-issues aren't enabled, add the child to a task list in the epic body and put `Part of #<epic>` at the top of the child body. Labels: `epic:<type>` (`research`/`prototype`/`refine`/`task`). Once claimed, the ticket is assigned to the driving dev.

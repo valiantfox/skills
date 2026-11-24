@@ -1,7 +1,8 @@
 ---
-name: refine
+name: fox-refine
 description: Interview the user relentlessly about a plan, decision, or idea. Use when the user wants to stress-test or refine their thinking.
 ---
+
 
 Interview me relentlessly about every aspect of this until we reach a shared understanding. Walk down each branch of the decision tree, resolving dependencies between decisions one-by-one.
 

@@ -1,9 +1,10 @@
 ---
-name: setup-repo
+name: fox-setup-repo
 description: "Configure this repo's issue tracker and domain docs for the other skills. Run once per repo before using the other skills."
 ---
 
 # Setup Repo
+
 
 Scaffold the per-repo configuration that the other skills assume:
 
@@ -34,7 +35,7 @@ Lead each section with the recommended answer so the user can accept it in a wor
 
 **Section A: Issue tracker.**
 
-> Explainer: The "issue tracker" is where issues live for this repo. Skills like `planning` and `implement` read from and write to it. They need to know whether to call `gh issue create`, write a markdown file under `.scratch/`, or follow some other workflow you describe. Pick the place you actually track work for this repo.
+> Explainer: The "issue tracker" is where issues live for this repo. Skills like `fox-plan` and `fox-write-code` read from and write to it. They need to know whether to call `gh issue create`, write a markdown file under `.scratch/`, or follow some other workflow you describe. Pick the place you actually track work for this repo.
 
 Default to GitHub. If a `git remote` points at GitHub, propose that. If a `git remote` points at GitLab (`gitlab.com` or a self-hosted host), propose GitLab. Otherwise (or if the user prefers), offer:
 
@@ -78,6 +79,7 @@ The block:
 ### Domain docs
 
 [one-line summary of layout: "single-context" or "multi-context"]. See `docs/agents/domain.md`.
+
 ```
 
 Then write the docs files using the seed templates in this skill folder as a starting point:
