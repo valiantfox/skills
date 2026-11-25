@@ -18,4 +18,6 @@ Run each step. Each step is mandatory.
 
 Commit it separately, including only your changes and leaving earlier uncommitted changes uncommitted. One ticket, one commit. Follow the project's commit style.
 
+Close the ticket.
+
 If tasks remain, tell me the recommended command to continue. Example: "Recommended Next: `@fox-implement #87` to continue the effort"

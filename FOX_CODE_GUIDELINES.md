@@ -2,7 +2,7 @@
 
 Apply these guidelines when implementing or reviewing code with a Fox skill.
 
-- **Error handling.** Surface unexpected errors and handle them at a boundary that can respond meaningfully; use fallbacks only when they are expected behavior.
+- **Error handling.** Prefer surfacing errors or handling them at a boundary that can respond meaningfully; use fallbacks only when the user asks for it.
 - **Backward compatibility.** Add backward compatibility only when the user explicitly requires it.
 - **Explicit interfaces.** Introduce a separate interface type only when it serves a current need, not hypothetical flexibility.
 - **Shared extraction.** Consider extracting shared logic on its third occurrence, when the underlying responsibility is genuinely shared. Extract sooner when necessary for correctness, security, or data integrity.
