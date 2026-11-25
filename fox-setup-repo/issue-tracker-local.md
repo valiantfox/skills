@@ -18,13 +18,13 @@ Create a new file under `.scratch/<feature-slug>/` (creating the directory if ne
 
 Read the file at the referenced path. The user will normally pass the path or the issue number directly.
 
-## Epic operations
+## Plan operations
 
-Used by `/fox-plan`. The **epic** is a file with one **child** file per ticket.
+Used by `/fox-plan`. The **plan** is a file with one **child** file per ticket.
 
-- **Epic**: `.scratch/<effort>/epic.md` (the Notes / Decisions-so-far / Fog body).
+- **Plan**: `.scratch/<effort>/plan.md` (the Notes / Decisions-so-far / Fog body).
 - **Child ticket**: `.scratch/<effort>/issues/NN-<slug>.md`, numbered from `01`, with the question in the body. A `Type:` line records the ticket type (`research`/`prototype`/`refine`/`task`); a `Status:` line records `claimed`/`resolved`.
 - **Blocking**: a `Blocked by: NN, NN` line near the top. A ticket is unblocked when every file it lists is `resolved`.
 - **Frontier**: scan `.scratch/<effort>/issues/` for files that are open, unblocked, and unclaimed; first by number wins.
 - **Claim**: set `Status: claimed` and save before any work.
-- **Resolve**: append the answer under an `## Answer` heading, set `Status: resolved`, then append a context pointer (gist + link) to the epic's Decisions-so-far in `epic.md`.
+- **Resolve**: append the answer under an `## Answer` heading, set `Status: resolved`, then append a context pointer (gist + link) to the plan's Decisions-so-far in `plan.md`.

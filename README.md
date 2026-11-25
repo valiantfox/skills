@@ -5,7 +5,7 @@ Agent skills for planning and implementing work.
 - `fox-write-code`: Started as a fork of `mattpocock/implement` but was completly rewritten
 - `fox-implement`: New skill
 - `fox-implement-all`: Started as a fork of `mattpocock/implement-spec` but was completly rewritten
-- `fox-plan` is a fork of `mattpocock/wayfinder` and uses `epics`
+- `fox-plan` is a fork of `mattpocock/wayfinder` and uses `plans`
 - `fox-refine` is a fork of `mattpocock/grilling`
 - `fox-research`, `fox-prototype`, and `fox-tdd` are forks of the corresponding Matt Pocock skills
 - `fox-spec-review` is a fork of `mattpocock/code-review` but was renamed because its focus is not on reviewing the code through a technical lense

@@ -26,13 +26,13 @@ Create a GitHub issue.
 
 Read it as in **Read an issue** above.
 
-## Epic operations
+## Plan operations
 
-Used by `/fox-plan`. The **epic** is a single issue with **child** issues as tickets.
+Used by `/fox-plan`. The **plan** is a single issue with **child** issues as tickets.
 
-- **Epic**: a single issue labelled `epic`, holding the Notes / Decisions-so-far / Fog body. `gh issue create --label epic`.
-- **Child ticket**: an issue linked to the epic as a GitHub sub-issue (see **Make an issue a sub-issue of a parent**). Where sub-issues aren't enabled, add the child to a task list in the epic body and put `Part of #<epic>` at the top of the child body. Labels: `epic:<type>` (`research`/`prototype`/`refine`/`task`). Once claimed, the ticket is assigned to the driving dev.
+- **Plan**: a single issue labelled `plan`, holding the Notes / Decisions-so-far / Fog body. `gh issue create --label plan`.
+- **Child ticket**: an issue linked to the plan as a GitHub sub-issue (see **Make an issue a sub-issue of a parent**). Where sub-issues aren't enabled, add the child to a task list in the plan body and put `Part of #<plan>` at the top of the child body. Labels: `plan:<type>` (`research`/`prototype`/`refine`/`task`). Once claimed, the ticket is assigned to the driving dev.
 - **Blocking**: see **Blocking** under Conventions.
-- **Frontier query**: list the epic's open children (`gh issue list --state open`, scoped to the epic's sub-issues / task list), drop any with an open blocker (see **Count open blockers**, or an open issue in the `Blocked by` line) or an assignee; first in epic order wins.
+- **Frontier query**: list the plan's open children (`gh issue list --state open`, scoped to the plan's sub-issues / task list), drop any with an open blocker (see **Count open blockers**, or an open issue in the `Blocked by` line) or an assignee; first in plan order wins.
 - **Claim**: `gh issue edit <n> --add-assignee @me`, the session's first write.
-- **Resolve**: `gh issue comment <n> --body "<answer>"`, then `gh issue close <n>`, then append a context pointer (gist + link) to the epic's Decisions-so-far.
+- **Resolve**: `gh issue comment <n> --body "<answer>"`, then `gh issue close <n>`, then append a context pointer (gist + link) to the plan's Decisions-so-far.

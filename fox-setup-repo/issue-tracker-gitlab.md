@@ -22,13 +22,13 @@ Create a GitLab issue.
 
 Run `glab issue view <number> --comments`.
 
-## Epic operations
+## Plan operations
 
-Used by `/fox-plan`. The **epic** is a single issue with **child** issues as tickets.
+Used by `/fox-plan`. The **plan** is a single issue with **child** issues as tickets.
 
-- **Epic**: a single issue labelled `epic`, holding the Notes / Decisions-so-far / Fog body. `glab issue create --label epic`. (On GitLab tiers with native epics, a native epic may hold it instead; a labelled issue works everywhere.)
-- **Child ticket**: an issue carrying `Part of #<epic>` at the top of its description, linked to the epic (`glab issue create --linked-issues <epic> --link-type relates_to`), and labels `epic:<type>` (`research`/`prototype`/`refine`/`task`). Once claimed, the ticket is assigned to the driving dev.
+- **Plan**: a single issue labelled `plan`, holding the Notes / Decisions-so-far / Fog body. `glab issue create --label plan`.
+- **Child ticket**: an issue carrying `Part of #<plan>` at the top of its description, linked to the plan (`glab issue create --linked-issues <plan> --link-type relates_to`), and labels `plan:<type>` (`research`/`prototype`/`refine`/`task`). Once claimed, the ticket is assigned to the driving dev.
 - **Blocking**: GitLab's **native blocking link**, the canonical, UI-visible representation. Add it with the `/blocked_by #<n>` quick action, posted as a note (`glab issue note <child> --message "/blocked_by #<blocker>"`). Native blocking links are a Premium/Ultimate feature; on the free tier (or where unavailable) fall back to a `Blocked by: #<n>, #<n>` line at the top of the description. A ticket is unblocked when every blocker is closed.
-- **Frontier query**: list the epic's children with `glab api projects/:id/issues/<epic>/links`, keeping open issues that carry an `epic:<type>` label; drop any with an open blocker: a native `blocked_by` link to an open issue (`glab api projects/:id/issues/<child-iid>/links`), or an open issue in the `Blocked by` line, or an assignee; first in epic order wins.
+- **Frontier query**: list the plan's children with `glab api projects/:id/issues/<plan>/links`, keeping open issues that carry a `plan:<type>` label; drop any with an open blocker: a native `blocked_by` link to an open issue (`glab api projects/:id/issues/<child-iid>/links`), or an open issue in the `Blocked by` line, or an assignee; first in plan order wins.
 - **Claim**: `glab issue update <n> --assignee @me`, the session's first write.
-- **Resolve**: `glab issue note <n> --message "<answer>"`, then `glab issue close <n>`, then append a context pointer (gist + link) to the epic's Decisions-so-far.
+- **Resolve**: `glab issue note <n> --message "<answer>"`, then `glab issue close <n>`, then append a context pointer (gist + link) to the plan's Decisions-so-far.
