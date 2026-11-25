@@ -20,4 +20,4 @@ Commit it separately, including only your changes and leaving earlier uncommitte
 
 Close the ticket.
 
-If tasks remain, tell me the recommended command to continue. Example: "Recommended Next: `@fox-implement #87` to continue the effort"
+If tasks remain, tell the user the recommended command to continue. Example: "Recommended Next: `@fox-implement #87` to continue the effort"

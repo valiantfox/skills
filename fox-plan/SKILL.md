@@ -1,7 +1,6 @@
 ---
 name: fox-plan
 description: Plan a huge chunk of work (more than one agent session can hold) as a shared plan of decision tickets on your issue tracker, and resolve them one at a time until the way to the destination is clear.
-disable-model-invocation: true
 ---
 
 
@@ -128,4 +127,4 @@ User invokes with a plan (URL or number). A ticket is **optional**: without one,
 
 The user may run unblocked tickets in parallel, so expect other sessions to be editing the tracker concurrently.
 
-If tasks remain, tell me the recommended command to continue. Example: "Recommended Next: `@fox-plan #87` to continue the effort"
+If tasks remain, tell the user the recommended command to continue. Example: "Recommended Next: `@fox-plan #87` to continue the effort"
