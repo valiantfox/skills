@@ -127,4 +127,4 @@ User invokes with a plan (URL or number). A ticket is **optional**: without one,
 
 The user may run unblocked tickets in parallel, so expect other sessions to be editing the tracker concurrently.
 
-If tasks remain, tell the user the recommended command to continue. Example: "Recommended Next: `@fox-plan #87` to continue the effort"
+If tasks remain, tell the user the recommended command to continue. Check `@fox-next` on what to suggest.
